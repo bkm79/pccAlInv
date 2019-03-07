@@ -23,9 +23,7 @@ def check_events(ship):
             check_keydown_events(event,ship)
         elif event.type == pygame.KEYUP:
             check_keyup_events(event,ship)
-            
-        
-                
+
 def update_screen(ai_settings, screen, ship):
     """update screen"""
     screen.fill(ai_settings.bg_color)
