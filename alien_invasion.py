@@ -5,27 +5,27 @@ from settings import Settings
 from ship import Ship
 
 def run_game():
-    #инициализация и создание объекта экрана
+    #Initialization and create screen object
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_widht,ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
     
-    #создание корабля
+    #create ship
     ship = Ship(screen)
     
-    #запуск основного цикла
+    #main cycle
     while True:
-        #отслеживание событий клавиатуры и мыши
+        #track keyboard event
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
         
-        #перерисовка экрана
+        #update screen
         screen.fill(ai_settings.bg_color)
         ship.blitme()
         
-        #отображение последего отрисованного экрана
+        #redraw screen
         pygame.display.flip()
         
 run_game()
