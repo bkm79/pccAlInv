@@ -31,5 +31,5 @@ class Ship():
         self.rect.centerx = self.center
         
     def blitme(self):
-        #Рисует корабль в текущей позиции
+        #redraw ship
         self.screen.blit(self.image, self.rect)
